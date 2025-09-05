@@ -1,0 +1,27 @@
+<!-- <div class="home-container">
+  <div class="header-container">
+    <app-header></app-header>
+  </div>
+
+  <div class="mainsection-container">
+    <app-mainsection></app-mainsection>
+  </div>
+
+  <div class="footer-container"></div>   
+    
+
+ 
+</div> -->
+
+
+<div class="home-container">
+  <div class="header-container">
+    <app-header (menuToggle)="toggleSidebar()"></app-header> <!-- Event Binding para escuchar un evento personalizado llamado menuToggle que proviene del componente  -->
+  </div>
+
+  <div class="mainsection-container">
+    <app-mainsection [collapsed]="sidebarCollapsed"></app-mainsection> <!-- pasa el valor de sidebarCollapsed desde el componente padre al hijo  -->
+  </div>
+
+  <div class="footer-container"></div>   
+</div>

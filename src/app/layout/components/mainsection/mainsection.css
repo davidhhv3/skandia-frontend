@@ -1,0 +1,28 @@
+
+.mainsection-wrapper {
+  display: flex;
+  flex-direction: column; /* secciones una debajo de otra */
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
+}
+
+.section1, .section2 {
+  flex: 1;              /* ocupan la misma altura proporcional */
+  display: flex;  
+  border: 1px dashed gray; /* solo para visualización */
+}
+
+.sidebar {
+  height: 100%;       /* ocupa todo el alto del padre */
+  background-color: #e6f704; 
+  transition: width 0.3s ease;  
+}
+.section1-content {
+  height: 100%;
+  background-color: #b4be22; 
+  transition: width 0.3s ease; 
+}
+
+
+
