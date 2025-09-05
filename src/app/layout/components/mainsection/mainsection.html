@@ -1,22 +1,29 @@
-
-<!-- <div class="mainsection-wrapper">
-  <aside class="sidebar" [ngStyle]="{'width': collapsed ? '0%' : '20%'}"></aside>  
-
-  <div class="content" [ngStyle]="{'width': collapsed ? '100%' : '80%'}">
-    <section class="section1"></section>    
-    <section class="section2"></section>
-  </div>
-</div> -->
-
-
-<div class="mainsection-wrapper">  
+<div class="mainsection-container">  
 
   <section class="section1">
-     <aside class="sidebar" [ngStyle]="{'width': collapsed ? '0%' : '3%'}"></aside>
-     <div class="section1-content" [ngStyle]="{'width': collapsed ? '100%' : '97%'}"></div>
-  </section>  
-  
-  
+     <aside class="sidebar" [ngStyle]="{'width': collapsed ? '0%' : '3%'}"></aside>    
+     <div class="section1-content">
+
+
+        <div class="section1-content-top">
+
+           <div class="inicio">
+             <img src="home.svg" class="inicio-logo" />
+             <p class="inicio-texto color-blanco" >Ir al inicio</p>            
+           </div>
+           <div class="notificacion" >
+            <p class="notificacion-texto1 color-blanco">¡Tu objetivo ha sido agregado exitosamente!</p>
+            <p class="notificacion-texto2 color-blanco">¡Te hemos enviado un correo con la notificación!</p>
+           </div>
+
+        </div>
+
+
+
+        <div class="section1-content-bottom"></div>
+     </div>
+  </section>   
 
   <section class="section2"></section>  
+
 </div>
