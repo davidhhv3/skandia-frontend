@@ -6,7 +6,7 @@
   display: flex;  
   align-items: center;
   justify-content: space-between; 
-  padding: 0 200px;
+  padding: 0 200px;  
 }
 
 .header-menu {
@@ -16,8 +16,7 @@
   transform: translateY(-50%); 
 }
 
-.header-menu button {
-  font-size: 24px;         /* tamaño del ícono ☰ */
+.header-menu button { 
   color: #00C83C;          /* color del símbolo */
   background: none;        /* sin fondo */
   border: none;            /* sin borde */
@@ -68,45 +67,122 @@
   height: 27px;;
 }
 
-.header-right p {
+.header-right-title {
   font-family: Verdana, sans-serif; 
   font-weight: bold;              
   color: #00C83C;                  
   text-decoration: underline;      
-  font-size: 15px;                 
-}
-
-.header-right-title{
+  font-size: 15px;  
   padding-right: 13px;
-   cursor: pointer;
+  cursor: pointer;               
 }
-
 
 /* -- header-right styles -- */
 
 
 /* 📱 Pantallas medianas (tablets) */
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .header-container {
-    padding: 0 100px;
+    padding: 0 50px;    
   }
+}
+
+@media (max-width: 960px) {
+  .header-container {
+    padding: 0 30px;    
+  }
+  .header-menu {
+    left: 5px;  
+  }
+  .header-menu button { 
+    font-size: 20px;                  
+  }
+  .header-left-logo{   
+   height: 19px;
+  }
+  .header-left-title{ 
+    font-size: 18px; 
+  }
+
+  .header-right{
+    gap: 2px;
+  }
+
+  .header-right-logo-happy{
+    height: 24px;
+  }
+
+  .header-right-title{    
+    font-size: 13px;                 
+  }
+
 }
 
 /* 📱 Responsive: pantallas pequeñas */
-@media (max-width: 790px) {
+@media (max-width: 800px) {
   .header-container {
     flex-direction: column;   /* apila hijos */
     align-items: flex-end;    /* todo a la derecha */
-    padding: 0 20px;          /* menos padding */
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
+  .header-menu {
+    left: 5px;  
+  }
+  .header-menu button { 
+    font-size: 20px;                  
+  }
+  .header-left-logo{   
+   height: 17px;
+  }
+  .header-left-title{ 
+    font-size: 16px; 
+  }
 
+  .header-right{
+    gap: 2px;
+  }
 
-  .header-left,
-  .header-right {
-    margin-top: 10px; /* separación entre bloques */
+  .header-right-logo-happy{
+    height: 22px;
+  }
+  .header-right-title{
+    padding-right: 5px;   
+
+  }
+  .header-right-logo-compaq{
+    height: 22px; 
+  }
+
+}
+
+/* 📱 Responsive: pantallas pequeñas */
+@media (max-width: 500px) {
+  .header-container {
+    flex-direction: column;   /* apila hijos */
+    align-items: flex-end;    /* todo a la derecha */
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .header-left-logo{   
+   height: 15px;
+  }
+  .header-left-title{ 
+    font-size: 13px; 
+  }
+  .header-right-logo-happy{
+    height: 19px;
+  }
+  .header-right-title{
+    padding-right: 5px;
+  }
+  .header-right-logo-compaq{
+    height: 19px; 
   }
 }
+
+
 
 
 
