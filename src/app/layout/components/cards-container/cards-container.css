@@ -1,5 +1,4 @@
-.carousel-container{
-    background-color: rgba(255, 0, 0, 0.151);
+.carousel-container{  
     width: 100%;
     height: 100%;
     display: flex;
@@ -10,10 +9,24 @@
      display: flex;
     align-items: center;
 }
-.carousel-cards{
-    border: 1px solid black;  
-    flex: 1;   
+.carousel-cards {
+  border: 1px solid black;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; 
 }
+
+.carousel-card {
+  flex: 1;  
+  background-color: rgb(226, 14, 14);
+  text-align: center;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;  
+}
+
 .flip-horizontal{
     transform: scaleX(-1);    
 }

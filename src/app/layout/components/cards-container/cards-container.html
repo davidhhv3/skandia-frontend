@@ -5,15 +5,15 @@
         alt="Anterior"
         class="button-icon flip-horizontal"
         (mouseenter)="isHoverLeft = true"
-        (mouseleave)="isHoverLeft = false" />
+        (mouseleave)="isHoverLeft = false" 
+        (click)="prevCard()"/>
   </div>
 
   <!-- Contenedor central de tarjetas -->
   <div class="carousel-cards">
-    <div class="carousel-card">1</div>
-    <div class="carousel-card">2</div>
-    <div class="carousel-card">3</div>
-    <div class="carousel-card">4</div>
+    <div class="carousel-card" *ngFor="let card of visibleCards">
+      {{ card }}
+    </div>
   </div>
 
   <!-- Botón derecha -->
@@ -22,6 +22,7 @@
         alt="Siguiente"
         class="button-icon"
         (mouseenter)="isHoverRight = true"
-        (mouseleave)="isHoverRight = false" />
+        (mouseleave)="isHoverRight = false" 
+        (click)="nextCard()"/>
   </div>
 </div>
