@@ -5,3 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* src/styles.css */
+:root{
+  --scroll-track: #E2E2E2;
+  --scroll-thumb: #00C83C;}
+
+
+* {
+  scrollbar-width: thin;                    /* auto | thin | none */
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track); /* thumb track */
+}

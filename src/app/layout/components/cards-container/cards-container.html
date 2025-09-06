@@ -1,0 +1,27 @@
+<div class="carousel-container">
+  <!-- Botón izquierda -->
+  <div class="carousel-button carousel-button-left">
+    <img [src]="isHoverLeft ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
+        alt="Anterior"
+        class="button-icon flip-horizontal"
+        (mouseenter)="isHoverLeft = true"
+        (mouseleave)="isHoverLeft = false" />
+  </div>
+
+  <!-- Contenedor central de tarjetas -->
+  <div class="carousel-cards">
+    <div class="carousel-card">1</div>
+    <div class="carousel-card">2</div>
+    <div class="carousel-card">3</div>
+    <div class="carousel-card">4</div>
+  </div>
+
+  <!-- Botón derecha -->
+  <div class="carousel-button carousel-button-right">   
+    <img [src]="isHoverRight ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
+        alt="Siguiente"
+        class="button-icon"
+        (mouseenter)="isHoverRight = true"
+        (mouseleave)="isHoverRight = false" />
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.carousel-container{
+    background-color: rgba(255, 0, 0, 0.151);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.carousel-button{
+    border: 1px solid black;
+    flex: 0 0 3%;
+     display: flex;
+    align-items: center;
+}
+.carousel-cards{
+    border: 1px solid black;  
+    flex: 1;   
+}
+.flip-horizontal{
+    transform: scaleX(-1);    
+}
+.button-icon {
+  cursor: pointer;  
+}
+
+.button-icon:hover {
+  fill: orange;   /* color que quieras */
+}
+.carousel-button-right {
+   justify-content:flex-end;
+}

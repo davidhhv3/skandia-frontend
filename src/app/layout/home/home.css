@@ -12,3 +12,8 @@
     width: 100%;
     /* height: 850px;   */
 }
+.footer-container{
+  width: 100%;
+  height: 300px;
+  background-color: blue;
+}

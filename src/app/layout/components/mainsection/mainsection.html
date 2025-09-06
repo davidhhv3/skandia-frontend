@@ -1,7 +1,6 @@
 <div class="mainsection-container">  
 
-  <section class="section1">    
-     <!-- <aside class="sidebar" [ngStyle]="{'visibility': collapsed ? 'hidden' : 'visible'}"> -->
+  <section class="section1">     
       <aside class="sidebar" [ngStyle]="{'transform': collapsed ? 'translateX(-100%)' : 'translateX(0)'}">  
 
         <div class="sidebar-icon-container">
@@ -39,6 +38,10 @@
      </div>
   </section>   
 
-  <section class="section2"></section>  
+  <section class="section2">
+    <div class="card-container">
+      <app-cards-container></app-cards-container>
+    </div>
+  </section>  
 
 </div>

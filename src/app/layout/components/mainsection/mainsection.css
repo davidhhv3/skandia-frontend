@@ -15,8 +15,7 @@
 .section1-content {
   height: 100%;  
   transition: width 0.3s ease;  
-  width: 100%; 
-  border: #db1e8c 2px solid;
+  width: 100%;   
 } 
 
 .sidebar {
@@ -37,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
+    cursor: pointer;
   }
 
 .notificacion-card-container{
@@ -129,11 +129,26 @@
         font-size: 16px;  
         color: #3F3F3F;    
     }
-
      
 /* section1 */
 
+/* section2 */
+.section2{   
+   height: 440px;   
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
 
+.card-container{
+  width: 90%;
+  height: 100%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 43%;
+}
+
+/* section2 */
 
 
 @media ((max-width: 1240px)) {
