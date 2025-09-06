@@ -1,7 +1,13 @@
 <div class="mainsection-container">  
 
-  <section class="section1">
-     <aside class="sidebar" [ngStyle]="{'width': collapsed ? '0%' : '3%'}"></aside>  
+  <section class="section1">    
+     <!-- <aside class="sidebar" [ngStyle]="{'visibility': collapsed ? 'hidden' : 'visible'}"> -->
+      <aside class="sidebar" [ngStyle]="{'transform': collapsed ? 'translateX(-100%)' : 'translateX(0)'}">  
+
+        <div class="sidebar-icon-container">
+          <img src="home-1.svg" class="sidebar-icon" />
+        </div>       
+     </aside>  
       <div class="notificacion-card-container"> 
          <app-objective-card></app-objective-card>           
       </div>

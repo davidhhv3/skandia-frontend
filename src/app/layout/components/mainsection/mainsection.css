@@ -23,12 +23,21 @@
   position: absolute;   /* flota dentro de section1 */
   top: 0;
   left: 0;
-  height: 805px;
-  width: 3%;
+  height: 805px; 
   background-color: #E2E2E2;
-  transition: width 0.3s ease;
-  z-index: 10;          /* queda por encima del content */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 10;          /* queda por encima del content */  
+  width: 2.5%;         /* ancho relativo */
+  min-width: 30px;   /* nunca será más grande que esto */
 }
+  .sidebar-icon-container{
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #00C83C;   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
 
 .notificacion-card-container{
   position: absolute;  
@@ -136,6 +145,7 @@
   .section1-content-top{
     padding: 0 30px; 
   }
+
 }
 @media (max-width: 670px) {
   .section1-goal-text {
