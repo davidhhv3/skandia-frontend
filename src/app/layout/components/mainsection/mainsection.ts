@@ -1,9 +1,10 @@
 import { Component,Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ObjectiveCard } from "../objective-card/objective-card";
 
 @Component({
   selector: 'app-mainsection',
-  imports: [CommonModule],
+  imports: [CommonModule,ObjectiveCard],
   templateUrl: './mainsection.html',
   styleUrl: './mainsection.css'
 })

@@ -1,0 +1,114 @@
+.objective-card-container {
+  display: flex;
+  flex-direction: column; /* ahora las secciones se apilan una debajo de otra */
+  width: 100%;
+  height: 100%; /* ocupa toda la pantalla; cámbialo si quieres que dependa del padre */
+}
+
+.objective-card-container-section1 {  
+  width: 100%;   /* todo el ancho */
+  height: 27.5%;  /* 20% del alto del contenedor */
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 30px;  
+}
+    .objective-card-container-section1-left .text-1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;  
+        font-weight: bold; 
+        color: #3F3F3F;
+    }
+    .objective-card-container-section1-left .text-2{
+         font-family:Verdana, Geneva, Tahoma, sans-serif; 
+        font-size: 12px;  
+        font-weight: bold;  
+        color:#363636; 
+                      
+    }
+
+    .objective-card-container-section1-right .text-1{
+        color: #00C83C;                  
+        text-decoration: underline; 
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;  
+        font-weight: bold;                
+    }
+
+.objective-card-container-section2 {
+  width: 100%;
+  height: 27.5%;   /* 20% del alto */
+  display: flex;
+
+}
+  .objective-card-container-section2-segmento {
+        flex: 1;              /* mismo ancho para todos */
+        height: 100%;         /* ocupan todo el alto */        
+        display: flex;
+        flex-direction: column;        
+        align-items: center;  
+        justify-content: center; 
+        gap:7%
+  }
+  .right-content{
+      display: flex;
+      align-items: center;       
+  }
+    .objective-card-container-section2-segmento .title{
+        font-family:Verdana, Geneva, Tahoma, sans-serif; 
+        font-size: 14px;              
+        color: #3F3F3F;         
+    }
+    .objective-card-container-section2-segmento .valor{
+        font-family: 'Montserrat', sans-serif;     
+         font-weight: bold; 
+         font-size: 15px;   
+         color:#3F3F3F;         
+         width: 74%;
+         text-align: center;
+         border-radius: 5px;
+         padding: 2%;
+    }
+        .objective-card-container-section2-segmento .valor-uno{
+            background-color: #A5D7E1;
+        }
+        .objective-card-container-section2-segmento .valor-dos{
+            background-color: #FECD72;
+        }
+        .objective-card-container-section2-segmento .valor-tres{
+            background-color: #95DBB7;
+        }
+
+.objective-card-container-section3 { 
+  width: 100%;
+  height:45%;    
+  display: flex;
+  justify-content: space-between;  
+  padding-left: 30px;
+}
+    .objective-card-container-section3-left{        
+        width: 75%;    
+        display: flex;   
+        align-items: flex-start; 
+        gap: 2%; 
+          
+    }
+        .check-icon{
+            margin-top: 10%;               
+        }
+        .section3-text{
+            color: #00C83C;                  
+            text-decoration: underline; 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;  
+            font-weight: bold;
+            margin-top: 10%;                                        
+        }
+    .objective-card-container-section3-right{
+        background-color: white;
+        width: 25%;      
+        height: 100%;     
+    }
+        .mountain-logo{
+            width: 100%;          /* ocupa el 100% del ancho disponible */
+            height: 100%;         /* ocupa el 100% del alto disponible */                 
+        }

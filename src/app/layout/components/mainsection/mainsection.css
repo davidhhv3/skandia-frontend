@@ -29,24 +29,38 @@
   transition: width 0.3s ease;
   z-index: 10;          /* queda por encima del content */
 }
+
+.notificacion-card-container{
+  position: absolute;  
+  top: 38%;
+  left: 50%;
+  width: 530px;
+  height: 280px;
+  background-color: white;
+  transform: translate(-50%, -50%); /* lo centra */
+  border-radius: 7px;  
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+  padding-top: 1%;
+}
+
 .section1-content-top{
   height: 285px;
   background-color: #34798a;
   padding: 0 200px; 
 }
 
-.inicio{  
-  display: flex;
-  gap: 8px;
-  padding-top: 30px;
-  cursor: pointer;
-}
-.inicio-texto{
-  text-decoration: underline;  
-  font-weight: bold;  
-  font-family: 'Montserrat', sans-serif;      
-  font-size: 15px;    
-}
+  .inicio{  
+    display: flex;
+    gap: 8px;
+    padding-top: 30px;
+    cursor: pointer;
+  }
+  .inicio-texto{
+    text-decoration: underline;  
+    font-weight: bold;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;     
+    font-size: 12px;        
+  }
 
 .notificacion{ 
    height: 100%;
@@ -57,11 +71,12 @@
 }
 .notificacion-texto1{
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
    font-weight: bold;  
 }
 .notificacion-texto2{
-  font-size: 21px;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;  
 }
 .color-blanco{
   color: white;    
@@ -69,9 +84,13 @@
 
 .section1-content-bottom{
   height: 520px;   
+  background-image: url('../../../../../public/Group\ 3329.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* ocupa todo el div sin deformarse */
+
 }
 
 /* section1 */
-
 
 

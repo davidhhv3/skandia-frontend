@@ -38,7 +38,7 @@
 }
 
 .header-left-title{ 
-  font-size: 21px;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   color: #3F3F3F;
   opacity: 1;
@@ -64,7 +64,8 @@
 }
 
 .header-right-logo-happy{
-  height: 27px;;
+  width: 24px;
+  height: 24px;
 }
 
 .header-right-title {
@@ -72,9 +73,13 @@
   font-weight: bold;              
   color: #00C83C;                  
   text-decoration: underline;      
-  font-size: 15px;  
+  font-size: 17px;  
   padding-right: 13px;
   cursor: pointer;               
+}
+.header-right-logo-compaq{
+    width: 32px;
+    height: 32px;
 }
 
 /* -- header-right styles -- */

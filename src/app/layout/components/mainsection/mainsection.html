@@ -1,12 +1,13 @@
 <div class="mainsection-container">  
 
   <section class="section1">
-     <aside class="sidebar" [ngStyle]="{'width': collapsed ? '0%' : '3%'}"></aside>    
+     <aside class="sidebar" [ngStyle]="{'width': collapsed ? '0%' : '3%'}"></aside>  
+      <div class="notificacion-card-container"> 
+         <app-objective-card></app-objective-card>           
+      </div>
      <div class="section1-content">
 
-
         <div class="section1-content-top">
-
            <div class="inicio">
              <img src="home.svg" class="inicio-logo" />
              <p class="inicio-texto color-blanco" >Ir al inicio</p>            
@@ -15,12 +16,12 @@
             <p class="notificacion-texto1 color-blanco">¡Tu objetivo ha sido agregado exitosamente!</p>
             <p class="notificacion-texto2 color-blanco">¡Te hemos enviado un correo con la notificación!</p>
            </div>
-
         </div>
 
 
 
-        <div class="section1-content-bottom"></div>
+        <div class="section1-content-bottom">
+        </div>
      </div>
   </section>   
 
