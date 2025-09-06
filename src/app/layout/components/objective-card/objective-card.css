@@ -22,8 +22,7 @@
          font-family:Verdana, Geneva, Tahoma, sans-serif; 
         font-size: 12px;  
         font-weight: bold;  
-        color:#363636; 
-                      
+        color:#363636;                      
     }
 
     .objective-card-container-section1-right .text-1{
@@ -112,3 +111,49 @@
             width: 100%;          /* ocupa el 100% del ancho disponible */
             height: 100%;         /* ocupa el 100% del alto disponible */                 
         }
+
+/* -2 */
+@media (max-width: 600px) { 
+    .objective-card-container-section1-left .text-1{   
+        font-size: 16px;                 
+    }
+
+    .objective-card-container-section1-left .text-2{        
+        font-size: 10px;                           
+    }
+    .objective-card-container-section1-right .text-1{ 
+        font-size: 13px;                       
+    }
+    .objective-card-container-section2-segmento .title{        
+        font-size: 12px;               
+    }
+    .objective-card-container-section2-segmento .valor{
+         font-size: 12px;   
+         padding: 2%;
+    }    
+        .section3-text{ 
+            font-size: 12px;                                               
+        }
+}
+@media (max-width: 440px) { 
+    .objective-card-container-section1-left .text-1{   
+        font-size: 12px;                 
+    }
+
+    .objective-card-container-section1-left .text-2{        
+        font-size: 10px;                           
+    }
+    .objective-card-container-section1-right .text-1{ 
+        font-size: 10px;                       
+    }
+    .objective-card-container-section2-segmento .title{        
+        font-size: 10px;               
+    }
+    .objective-card-container-section2-segmento .valor{
+         font-size: 10px;   
+         padding: 1%;
+    }    
+        .section3-text{ 
+            font-size: 10px;                                               
+        }
+}
