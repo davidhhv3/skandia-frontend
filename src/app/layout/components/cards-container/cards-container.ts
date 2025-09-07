@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import Splide from '@splidejs/splide';
 import { ProductService } from '../../../core/services/product-service';
 import { Product } from '../../../core/services/models/Product';
+import {  ProductCard } from "../../../shared/components/product-card/product-card";
 
 @Component({
   selector: 'app-cards-container',
-  imports: [CommonModule],
+  imports: [CommonModule,ProductCard],
   templateUrl: './cards-container.html',
   styleUrl: './cards-container.css'
 })

@@ -14,45 +14,7 @@
               <div class="splide__track">
                   <ul class="splide__list">
                       <li class="splide__slide" *ngFor="let p of products">
-
-
-
-                      <div class="product-card">
-                          <!-- Header -->
-                          <div class="card-header">
-                            <div class="product-dates">
-                                  <p class="product-name">{{ p.nameProduct }}</p>
-                                  <p class="product-number">#{{ p.numberProduct }}</p>
-                            </div>
-
-                            <div class="custom-check"></div>
-                          </div>
-
-                          <hr />
-
-                          <!-- Balance -->
-                          <div class="balance">
-                            <p class="balance-title">Ya cuentas con:</p>
-                            <p class="amount">${{p.balanceProduct}}</p>
-                          </div>
-
-                          <!-- Footer -->
-                          <div class="card-footer">
-                            <img src="Happy.svg" class="footer-icon" />
-
-                            <div class="footer-description-container">
-
-                              <p class = "footer-description">
-                                ¡Cuentas con <span class="highlight">${{p.balanceProduct}}</span>!<br/>
-                                <small class="desciption-bottom">{{ p.detaildProduct }}</small>                              
-                              </p>
-                            </div> 
-                          </div>
-
-                           <div class="to-floor"></div>
-
-                      </div>
-
+                        <app-product-card [product]="p"></app-product-card>
                       </li>
                   </ul>
               </div>
