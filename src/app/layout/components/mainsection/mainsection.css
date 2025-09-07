@@ -141,12 +141,13 @@
 }
 
 .card-container{
-  width: 90%;
+  width: 65%;
   height: 100%;
   border: 1px solid black;
   position: absolute;
-  bottom: 43%;
+  bottom: 43%;  
 }
+
 
 /* section2 */
 
@@ -159,6 +160,9 @@
 @media (max-width: 960px) {
   .section1-content-top{
     padding: 0 30px; 
+  }
+  .card-container{  
+    height: 90%;
   }
 
 }
@@ -177,6 +181,9 @@
   }
   .section1-action-icon{
     width: 6%;
+  }
+  .card-container{  
+    height: 80%;
   }
 }
 @media (max-width: 600px) {

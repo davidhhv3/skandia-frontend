@@ -1,29 +1,34 @@
-<div class="carousel-container">
-  <!-- Botón izquierda -->
-  <div class="carousel-button carousel-button-left">
-    <img id="prevBtn" class="splide__arrow--prev" [src]="isHoverLeft ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
-        alt="Anterior"
-        class="button-icon flip-horizontal"
-        (mouseenter)="isHoverLeft = true"
-        (mouseleave)="isHoverLeft = false" 
-        />
-  </div>
+<div class="carousel-wrapper">
+    <!-- Botón izquierda -->
+    <div class="carousel-button carousel-button-left">
+      <img id="prevBtn" class="splide__arrow--prev" [src]="isHoverLeft ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
+          alt="Anterior"
+          class="button-icon flip-horizontal"
+          (mouseenter)="isHoverLeft = true"
+          (mouseleave)="isHoverLeft = false" 
+          />
+    </div>
 
-  <!-- Contenedor central de tarjetas -->
-  <div class="carousel-cards">
 
-            <section class="splide" aria-label="Basic Structure Example">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide"><div>Slide 01</div></li>
-                    <li class="splide__slide"><div>Slide 02</div></li>
-                    <li class="splide__slide"><div>Slide 03</div></li>
-                    <li class="splide__slide"><div>Slide 04</div></li>
-                    <li class="splide__slide"><div>Slide 05</div></li>
-                </ul>
-            </div>
-        </section>   
-  </div>
+
+  
+        <div class="carousel">
+
+          <section class="splide" aria-label="Basic Structure Example">
+              <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide"><div>Slide 01</div></li>
+                      <li class="splide__slide"><div>Slide 02</div></li>
+                      <li class="splide__slide"><div>Slide 03</div></li>
+                      <li class="splide__slide"><div>Slide 04</div></li>
+                      <li class="splide__slide"><div>Slide 05</div></li>
+                  </ul>
+              </div>
+          </section>
+      </div>
+  
+
+
 
   <!-- Botón derecha -->
   <div class="carousel-button carousel-button-right">   
@@ -35,3 +40,5 @@
         />
   </div>
 </div>
+
+

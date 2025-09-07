@@ -20,8 +20,16 @@ export class CardsContainer implements AfterViewInit{
       perPage: 3,
       perMove: 1,
       arrows: false,
-      pagination: false,
-    });
+      pagination: false,    
+      gap: '1rem',  
+      breakpoints: {
+        1024: { perPage: 2 },  // tablets
+        768:  { perPage: 1 },  // móviles
+      }
+});
+
+
+   
 
     this.splide.mount();
 
