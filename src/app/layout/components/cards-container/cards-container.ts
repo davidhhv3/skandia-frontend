@@ -20,31 +20,14 @@ export class CardsContainer implements OnInit,AfterViewInit{
 
   constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {
-    // Después cargar productos
+
+ngOnInit(): void {
     this.productService.getProducts().subscribe({
       next: (data) => {
         this.products = data.listCard; 
 
-        // 👇 esperar al siguiente ciclo de detección de cambios
-        setTimeout(() => {
-          if (this.splide) {
-            this.splide.destroy();
-          }
-          this.splide = new Splide('.splide', {
-            type: 'loop',
-            perPage: 3,
-            perMove: 1,
-            arrows: false,
-            pagination: false,    
-            gap: '1rem',  
-            breakpoints: {
-              1024: { perPage: 2 },
-              768:  { perPage: 1 },
-            }
-          });
-          this.splide.mount();
-        });
+        // Esperar a que Angular pinte los productos
+        setTimeout(() => this.initSplide());
       },
       error: (err) => {
         console.error('Error al cargar productos', err);
@@ -53,32 +36,32 @@ export class CardsContainer implements OnInit,AfterViewInit{
   }
 
   ngAfterViewInit(): void {
+    // Conectar botones personalizados una sola vez
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (prevBtn) prevBtn.addEventListener('click', () => this.splide.go('<'));
+    if (nextBtn) nextBtn.addEventListener('click', () => this.splide.go('>'));
+  }
+
+  private initSplide(): void {
+    if (this.splide) {
+      this.splide.destroy();
+    }
+
     this.splide = new Splide('.splide', {
       type: 'loop',
       perPage: 3,
       perMove: 1,
       arrows: false,
-      pagination: false,    
-      gap: '1rem',  
+      pagination: false,
+      gap: '1rem',
       breakpoints: {
-        1024: { perPage: 2 },  // tablets
-        768:  { perPage: 1 },  // móviles
+        1024: { perPage: 2 },
+        768:  { perPage: 1 },
       }
-    });   
-
+    });
     this.splide.mount();
-
-    // conectar botones personalizados
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    if (prevBtn) {
-       prevBtn.addEventListener('click', () => this.splide.go('<'));
-    }
-    if (nextBtn) {
-       nextBtn.addEventListener('click', () => this.splide.go('>'));
-    }
   }
-
 }
 
