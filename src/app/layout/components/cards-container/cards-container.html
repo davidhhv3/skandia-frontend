@@ -14,22 +14,60 @@
               <div class="splide__track">
                   <ul class="splide__list">
                       <li class="splide__slide" *ngFor="let p of products">
-                        <div>{{p.nameProduct}}</div>
+
+
+
+                      <div class="product-card">
+                          <!-- Header -->
+                          <div class="card-header">
+                            <div class="product-dates">
+                                  <p class="product-name">{{ p.nameProduct }}</p>
+                                  <p class="product-number">#{{ p.numberProduct }}</p>
+                            </div>
+
+                            <div class="custom-check"></div>
+                          </div>
+
+                          <hr />
+
+                          <!-- Balance -->
+                          <div class="balance">
+                            <p class="balance-title">Ya cuentas con:</p>
+                            <p class="amount">${{p.balanceProduct}}</p>
+                          </div>
+
+                          <!-- Footer -->
+                          <div class="card-footer">
+                            <img src="Happy.svg" class="footer-icon" />
+
+                            <div class="footer-description-container">
+
+                              <p class = "footer-description">
+                                ¡Cuentas con <span class="highlight">${{p.balanceProduct}}</span>!<br/>
+                                <small class="desciption-bottom">{{ p.detaildProduct }}</small>                              
+                              </p>
+                            </div> 
+                          </div>
+
+                           <div class="to-floor"></div>
+
+                      </div>
+
                       </li>
                   </ul>
               </div>
           </section>
       </div>
 
-  <!-- Botón derecha -->
-  <div class="carousel-button carousel-button-right">   
-    <img id="nextBtn" class="splide__arrow--next" [src]="isHoverRight ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
-        alt="Siguiente"
-        class="button-icon"
-        (mouseenter)="isHoverRight = true"
-        (mouseleave)="isHoverRight = false" 
-        />
-  </div>
+    <!-- Botón derecha -->
+    <div class="carousel-button carousel-button-right">   
+      <img id="nextBtn" class="splide__arrow--next" [src]="isHoverRight ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
+          alt="Siguiente"
+          class="button-icon"
+          (mouseenter)="isHoverRight = true"
+          (mouseleave)="isHoverRight = false" 
+          />
+    </div>
 </div>
 
 

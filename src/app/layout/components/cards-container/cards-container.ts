@@ -55,7 +55,7 @@ ngOnInit(): void {
       perMove: 1,
       arrows: false,
       pagination: false,
-      gap: '1rem',
+      //gap: '1rem',
       breakpoints: {
         1024: { perPage: 2 },
         768:  { perPage: 1 },
