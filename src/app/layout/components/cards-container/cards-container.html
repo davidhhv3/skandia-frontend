@@ -9,16 +9,13 @@
           />
     </div>
   
-        <div class="carousel">
-
+        <div class="carousel" >
           <section class="splide" aria-label="Basic Structure Example">
               <div class="splide__track">
                   <ul class="splide__list">
-                      <li class="splide__slide"><div>Slide 01</div></li>
-                      <li class="splide__slide"><div>Slide 02</div></li>
-                      <li class="splide__slide"><div>Slide 03</div></li>
-                      <li class="splide__slide"><div>Slide 04</div></li>
-                      <li class="splide__slide"><div>Slide 05</div></li>
+                      <li class="splide__slide" *ngFor="let p of products">
+                        <div>{{p.nameProduct}}</div>
+                      </li>
                   </ul>
               </div>
           </section>
