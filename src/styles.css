@@ -1,4 +1,7 @@
 /* Aplica estas reglas a TODOS los elementos de la página */
+@import '@splidejs/splide/dist/css/splide.min.css';
+
+
 
 * {
   margin: 0;

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import Splide from '@splidejs/splide';
 
 @Component({
   selector: 'app-cards-container',
@@ -7,35 +8,34 @@ import { CommonModule } from '@angular/common';
   templateUrl: './cards-container.html',
   styleUrl: './cards-container.css'
 })
-export class CardsContainer {
+export class CardsContainer implements AfterViewInit{
   isHoverLeft = false;
   isHoverRight = false;
 
-   // Tarjetas (pueden venir de un servicio o API)
-  cards = [1, 2, 3, 4];
+  private splide!: Splide;
 
-  // Índice de la tarjeta actual
-  currentIndex = 0;
+  ngAfterViewInit(): void {
+    this.splide = new Splide('.splide', {
+      type: 'loop',
+      perPage: 3,
+      perMove: 1,
+      arrows: false,
+      pagination: false,
+    });
 
-  get visibleCards() {
-    // Siempre muestra 3 cards a partir del índice actual
-    const total = this.cards.length;
-    return [
-      this.cards[this.currentIndex % total],
-      this.cards[(this.currentIndex + 1) % total],
-      this.cards[(this.currentIndex + 2) % total],
-    ];
+    this.splide.mount();
+
+    // conectar botones personalizados
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => this.splide.go('<'));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => this.splide.go('>'));
+    }
   }
 
-  prevCard() {
-    // retrocede cíclico
-    this.currentIndex =
-      (this.currentIndex - 1 + this.cards.length) % this.cards.length;
-  }
-
-  nextCard() {
-    // avanza cíclico
-    this.currentIndex = (this.currentIndex + 1) % this.cards.length;
-  }
 }
 
