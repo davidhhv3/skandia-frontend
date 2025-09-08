@@ -10,6 +10,5 @@ import { CardsContainer } from "../cards-container/cards-container";
   styleUrl: './mainsection.css'
 })
 export class Mainsection {
-  @Input() collapsed = false; //Esa línea de código define una propiedad de entrada(forma de pasar datos desde un componente padre hacia un componente hijo) en Angular usando el decorador input
-                              
+  @Input() collapsed = false; //Esa línea de código define una propiedad de entrada(forma de pasar datos desde un componente padre hacia un componente hijo) en Angular usando el decorador input                              
 }
