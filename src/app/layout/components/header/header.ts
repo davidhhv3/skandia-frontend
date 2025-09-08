@@ -1,4 +1,4 @@
-import { Component,EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,18 @@ import { Component,EventEmitter, Output } from '@angular/core';
   styleUrl: './header.css'
 })
 export class Header {
-  @Output() menuToggle = new EventEmitter<void>(); //sirve para emitir un evento personalizado desde un componente hijo hacia su componente padre, permitiendo que el padre reaccione cuando algo ocurre en el hijo.
+  /** Evento que notifica al componente padre que se hizo clic en el menú */
+  @Output() menuToggle = new EventEmitter<void>();
 
-  onMenuClick() {  
-    this.menuToggle.emit(); //emitir un evento personalizado desde un componente hijo hacia su componente padre
+  /**
+   * Se ejecuta al hacer clic en el botón de menú.
+   * Emite el evento menuToggle hacia el componente padre.
+   */
+  onMenuClick(): void {
+    try {
+      this.menuToggle.emit();
+    } catch (err) {
+      console.error('Error al emitir el evento menuToggle', err);
+    }
   }
 }

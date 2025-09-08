@@ -7,7 +7,7 @@ import { ProductCard } from "../../../shared/components/product-card/product-car
 
 @Component({
   selector: 'app-cards-container',
-  imports: [CommonModule,ProductCard],
+  imports: [CommonModule, ProductCard],
   templateUrl: './cards-container.html',
   styleUrl: './cards-container.css'
 })
@@ -15,18 +15,24 @@ export class CardsContainer implements AfterViewInit {
   isHoverLeft = false; 
   isHoverRight = false;
 
+  /** Lista de productos obtenidos desde el servicio */
   products: Product[] = [];
+
   private splide!: Splide;
 
   @ViewChildren('slide') slides!: QueryList<ElementRef>;
 
   constructor(private productService: ProductService) {}
 
+  /**
+   * Se ejecuta después de que la vista ha sido inicializada.
+   * Obtiene los productos y espera a que Angular renderice los slides antes de inicializar Splide.
+   */
   ngAfterViewInit(): void {
     this.productService.getProducts().subscribe({
       next: (data) => {
         this.products = data.listCard;
-        
+
         // Esperar a que Angular pinte los slides
         this.slides.changes.subscribe(() => this.initSplide());
       },
@@ -34,6 +40,9 @@ export class CardsContainer implements AfterViewInit {
     });
   }
 
+  /**
+   * Inicializa el carrusel Splide y conecta los botones de navegación personalizados.
+   */
   private initSplide(): void {
     if (this.splide) {
       this.splide.destroy();
@@ -52,12 +61,11 @@ export class CardsContainer implements AfterViewInit {
     });
     this.splide.mount();
 
-  // Conectar botones personalizados después de montar Splide
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+    // Conectar botones personalizados
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-  if (prevBtn) prevBtn.addEventListener('click', () => this.splide.go('<'));
-  if (nextBtn) nextBtn.addEventListener('click', () => this.splide.go('>'));
-  
+    if (prevBtn) prevBtn.addEventListener('click', () => this.splide.go('<'));
+    if (nextBtn) nextBtn.addEventListener('click', () => this.splide.go('>'));
   }
 }

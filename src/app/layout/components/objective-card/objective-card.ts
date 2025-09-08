@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './objective-card.css'
 })
 export class ObjectiveCard {
-
 }
