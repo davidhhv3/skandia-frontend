@@ -13,7 +13,7 @@
           <section class="splide" aria-label="Basic Structure Example">
               <div class="splide__track">
                   <ul class="splide__list">
-                      <li class="splide__slide" *ngFor="let p of products">
+                      <li class="splide__slide" *ngFor="let p of products" #slide>
                         <app-product-card [product]="p"></app-product-card>
                       </li>
                   </ul>
