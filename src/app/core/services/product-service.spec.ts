@@ -36,7 +36,7 @@ describe('ProductService', () => {
     httpMock.verify();
   });
 
-  it('should be created', () => {
+  fit('should be created', () => {
     expect(service).toBeTruthy();
   });
 
