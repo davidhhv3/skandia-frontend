@@ -3,6 +3,8 @@ import { ProductCard } from './product-card';
 import { Product } from '../../../core/services/models/Product';
 import { By } from '@angular/platform-browser';
 
+
+
 describe('ProductCard', () => {
   let component: ProductCard;
   let fixture: ComponentFixture<ProductCard>;
@@ -28,7 +30,7 @@ describe('ProductCard', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should accept product input', () => {//**************** */
+  it('should accept product input', () => {//**************** */
     component.product = mockProduct;
     expect(component.product).toEqual(mockProduct);
   });
