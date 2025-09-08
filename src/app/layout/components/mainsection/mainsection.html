@@ -1,43 +1,68 @@
+<!-- Contenedor principal de la sección -->
 <div class="mainsection-container">  
 
+  <!-- ===========================
+       Sección 1: Sidebar y notificaciones
+       =========================== -->
   <section class="section1">     
-      <aside class="sidebar" [ngStyle]="{'transform': collapsed ? 'translateX(-100%)' : 'translateX(0)'}">  
 
-        <div class="sidebar-icon-container">
-          <img src="home-1.svg" class="sidebar-icon" />
-        </div>       
-     </aside>  
-      <div class="notificacion-card-container"> 
-         <app-objective-card></app-objective-card>           
+    <!-- Sidebar lateral con animación según estado collapsed -->
+    <aside class="sidebar" [ngStyle]="{'transform': collapsed ? 'translateX(-100%)' : 'translateX(0)'}">  
+      <div class="sidebar-icon-container">
+        <img src="home-1.svg" class="sidebar-icon" alt="Ícono Home"/>
+      </div>       
+    </aside>  
+
+    <!-- Contenedor de tarjetas de notificación u objetivos -->
+    <div class="notificacion-card-container"> 
+       <app-objective-card></app-objective-card>           
+    </div>
+
+    <!-- Contenido principal de la sección 1 -->
+    <div class="section1-content">
+
+      <!-- Parte superior: inicio y mensajes de notificación -->
+      <div class="section1-content-top">
+         <div class="inicio">
+           <img src="home.svg" class="inicio-logo" alt="Inicio"/>
+           <p class="inicio-texto color-blanco">Ir al inicio</p>            
+         </div>
+         <div class="notificacion">
+           <p class="notificacion-texto1 color-blanco">
+             ¡Tu objetivo ha sido agregado exitosamente!
+           </p>
+           <p class="notificacion-texto2 color-blanco">
+             ¡Te hemos enviado un correo con la notificación!
+           </p>
+         </div>
       </div>
-     <div class="section1-content">
 
-        <div class="section1-content-top">
-           <div class="inicio">
-             <img src="home.svg" class="inicio-logo" />
-             <p class="inicio-texto color-blanco" >Ir al inicio</p>            
-           </div>
-           <div class="notificacion" >
-            <p class="notificacion-texto1 color-blanco">¡Tu objetivo ha sido agregado exitosamente!</p>
-            <p class="notificacion-texto2 color-blanco">¡Te hemos enviado un correo con la notificación!</p>
-           </div>
-        </div>
-        <div class="section1-content-bottom">
-          <p class="section1-goal-text">
-            ¡Vamos por esos 
-            <span class="highlight-orange">$6.000.000</span> 
-            para 
-            <span class="highlight-orange">Conocer mi sobrino</span>!
+      <!-- Parte inferior: meta, submeta y acción -->
+      <div class="section1-content-bottom">
+        <p class="section1-goal-text">
+          ¡Vamos por esos 
+          <span class="highlight-orange">$6.000.000</span> 
+          para 
+          <span class="highlight-orange">Conocer mi sobrino</span>!
+        </p>
+        <p class="section1-subgoal-text">
+          A través de tus productos y nuestros rendimientos podremos lograrlo!
+        </p>
+        <div class="section1-action-container">
+          <p class="section1-action-text">
+            Asocia tus productos o adquiere uno nuevo.
           </p>
-          <p class="section1-subgoal-text">iA través de tus productos y nuestros rendimientos podremos lograrlo!</p>
-          <div class="section1-action-container">
-              <p class="section1-action-text">Asocia tus productos o adquiere uno nuevo.</p>
-              <img src="Group 12953.svg" class="section1-action-icon" />
-          </div>
+          <img src="Group 12953.svg" class="section1-action-icon" alt="Acción"/>
         </div>
-     </div>
-  </section>   
+      </div>
 
+    </div> <!-- /.section1-content -->
+
+  </section> <!-- /.section1 -->  
+
+  <!-- ===========================
+       Sección 2: Contenedor de tarjetas y botón de acción
+       =========================== -->
   <section class="section2">
     <div class="card-container">
       <app-cards-container></app-cards-container>
@@ -47,4 +72,4 @@
     </div>
   </section>  
 
-</div>
+</div> <!-- /.mainsection-container -->

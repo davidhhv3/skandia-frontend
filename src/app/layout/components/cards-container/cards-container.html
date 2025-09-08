@@ -1,35 +1,40 @@
 <div class="carousel-wrapper">
-    <!-- Botón izquierda -->
-    <div class="carousel-button carousel-button-left">
-      <img id="prevBtn" class="splide__arrow--prev" [src]="isHoverLeft ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
-          alt="Anterior"
-          class="button-icon flip-horizontal"
-          (mouseenter)="isHoverLeft = true"
-          (mouseleave)="isHoverLeft = false" 
-          />
-    </div>
-  
-        <div class="carousel" >
-          <section class="splide" aria-label="Basic Structure Example">
-              <div class="splide__track">
-                  <ul class="splide__list">
-                      <li class="splide__slide" *ngFor="let p of products" #slide>
-                        <app-product-card [product]="p"></app-product-card>
-                      </li>
-                  </ul>
-              </div>
-          </section>
+
+  <!-- Botón izquierda -->
+  <div class="carousel-button carousel-button-left">
+    <img 
+      id="prevBtn"
+      class="splide__arrow--prev button-icon flip-horizontal"
+      [src]="isHoverLeft ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
+      alt="Anterior"
+      (mouseenter)="isHoverLeft = true"
+      (mouseleave)="isHoverLeft = false" 
+    />
+  </div>
+
+  <!-- Carrusel -->
+  <div class="carousel">
+    <section class="splide" aria-label="Basic Structure Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide" *ngFor="let p of products" #slide>
+            <app-product-card [product]="p"></app-product-card>
+          </li>
+        </ul>
       </div>
+    </section>
+  </div>
 
-    <!-- Botón derecha -->
-    <div class="carousel-button carousel-button-right">   
-      <img id="nextBtn" class="splide__arrow--next" [src]="isHoverRight ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
-          alt="Siguiente"
-          class="button-icon"
-          (mouseenter)="isHoverRight = true"
-          (mouseleave)="isHoverRight = false" 
-          />
-    </div>
+  <!-- Botón derecha -->
+  <div class="carousel-button carousel-button-right">
+    <img 
+      id="nextBtn"
+      class="splide__arrow--next button-icon"
+      [src]="isHoverRight ? 'Group 9764-1.svg' : 'Group 9764.svg'" 
+      alt="Siguiente"
+      (mouseenter)="isHoverRight = true"
+      (mouseleave)="isHoverRight = false" 
+    />
+  </div>
+
 </div>
-
-

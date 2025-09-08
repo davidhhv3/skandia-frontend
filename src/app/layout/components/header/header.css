@@ -1,4 +1,6 @@
-/* Contenedor principal del header */
+/* ===============================
+   Contenedor principal del header
+   =============================== */
 .header-container {
   position: relative;
   width: 100%;
@@ -9,6 +11,9 @@
   padding: 0 200px;  
 }
 
+/* -------------------------------
+   Menú hamburguesa
+   ------------------------------- */
 .header-menu {
   position: absolute;   
   left: 20px;           
@@ -17,34 +22,35 @@
 }
 
 .header-menu button { 
-  color: #00C83C;          /* color del símbolo */
-  background: none;        /* sin fondo */
-  border: none;            /* sin borde */
-  cursor: pointer;         /* mano al pasar */
-  outline: none;           /* quita borde de enfoque */
+  color: #00C83C;          
+  background: none;        
+  border: none;            
+  cursor: pointer;         
+  outline: none;           
   font-size: 26px;
 }
 
-
-/* -- header-left styles -- */
-.header-left{
+/* -------------------------------
+   Sección izquierda: logo y título
+   ------------------------------- */
+.header-left {
   display: flex;  
   align-items: center;
-  gap:15px;  
+  gap: 15px;  
 }
 
-.header-left-logo{   
+.header-left-logo {   
   height: 22px;
 }
 
-.header-left-title{ 
+.header-left-title { 
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   color: #3F3F3F;
   opacity: 1;
 }
 
-.vertical-line{
+.vertical-line {
   display: inline-block; 
   width: 3px;
   height: 28px;
@@ -52,18 +58,16 @@
   opacity: 1;
 }
 
-/* -- header-left styles -- */
-
-
-/* -- header-right styles -- */
-
-.header-right{
+/* -------------------------------
+   Sección derecha: logos e info
+   ------------------------------- */
+.header-right {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.header-right-logo-happy{
+.header-right-logo-happy {
   width: 24px;
   height: 24px;
 }
@@ -77,142 +81,60 @@
   padding-right: 13px;
   cursor: pointer;               
 }
-.header-right-logo-compaq{
-    width: 32px;
-    height: 32px;
+
+.header-right-logo-compaq {
+  width: 32px;
+  height: 32px;
 }
 
-/* -- header-right styles -- */
-
+/* ===============================
+   Responsive
+   =============================== */
 
 /* 📱 Pantallas medianas (tablets) */
 @media (max-width: 1240px) {
-  .header-container {
-    padding: 0 50px;    
-  }
+  .header-container { padding: 0 50px; }
 }
 
 @media (max-width: 960px) {
-  .header-container {
-    padding: 0 30px;    
-  }
-  .header-menu {
-    left: 5px;  
-  }
-  .header-menu button { 
-    font-size: 20px;                  
-  }
-  .header-left-logo{   
-   height: 19px;
-  }
-  .header-left-title{ 
-    font-size: 18px; 
-  }
-
-  .header-right{
-    gap: 2px;
-  }
-
-  .header-right-logo-happy{
-    height: 24px;
-  }
-
-  .header-right-title{    
-    font-size: 13px;                 
-  }
-
+  .header-container { padding: 0 30px; }
+  .header-menu { left: 5px; }
+  .header-menu button { font-size: 20px; }
+  .header-left-logo { height: 19px; }
+  .header-left-title { font-size: 18px; }
+  .header-right { gap: 2px; }
+  .header-right-logo-happy { height: 24px; }
+  .header-right-title { font-size: 13px; }
 }
 
-/* 📱 Responsive: pantallas pequeñas */
+/* 📱 Pantallas pequeñas */
 @media (max-width: 800px) {
   .header-container {
-    flex-direction: column;   /* apila hijos */
-    align-items: flex-end;    /* todo a la derecha */
-    padding-top: 12px;
-    padding-bottom: 12px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 12px 0;
   }
-
-  .header-menu {
-    left: 5px;  
-  }
-  .header-menu button { 
-    font-size: 20px;                  
-  }
-  .header-left-logo{   
-   height: 17px;
-  }
-  .header-left-title{ 
-    font-size: 16px; 
-  }
-
-  .header-right{
-    gap: 2px;
-  }
-
-  .header-right-logo-happy{
-    height: 22px;
-  }
-  .header-right-title{
-    padding-right: 5px;
-   
-  }
-  .header-right-logo-compaq{
-    height: 22px; 
-  }
-  .vertical-line{
-  height: 20px;
-  }
-
+  .header-left-logo { height: 17px; }
+  .header-left-title { font-size: 16px; }
+  .header-right { gap: 2px; }
+  .header-right-logo-happy { height: 22px; }
+  .header-right-title { padding-right: 5px; }
+  .header-right-logo-compaq { height: 22px; }
+  .vertical-line { height: 20px; }
 }
 
-/* 📱 Responsive: pantallas pequeñas */
+/* 📱 Pantallas muy pequeñas */
 @media (max-width: 500px) {
-  .header-container {
-    flex-direction: column;   /* apila hijos */
-    align-items: flex-end;    /* todo a la derecha */
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  .header-left-logo{   
-   height: 15px;
-  }
-  .header-left-title{ 
-    font-size: 13px; 
-  }
-  .header-right-logo-happy{
-    height: 19px;
-  }
-  .header-right-title{
-    padding-right: 5px;
-  }
-  .header-right-logo-compaq{
-    height: 19px; 
-  }
+  .header-left-logo { height: 15px; }
+  .header-left-title { font-size: 13px; }
+  .header-right-logo-happy { height: 19px; }
+  .header-right-logo-compaq { height: 19px; }
 }
+
 @media (max-width: 410px) {
-  .header-left-logo{   
-   height: 12px;   
-  }
-  .header-left-title{ 
-    font-size: 11px; 
-  }
-  .header-right-logo-happy{
-    height: 16px;
-  }
-  .header-right-title{
-    padding-right: 5px;
-  }
-  .header-right-logo-compaq{
-    height: 16px;   
-  }
-  .header-right-title{    
-    font-size: 11px;                 
-  }
+  .header-left-logo { height: 12px; }
+  .header-left-title { font-size: 11px; }
+  .header-right-logo-happy { height: 16px; }
+  .header-right-logo-compaq { height: 16px; }
+  .header-right-title { font-size: 11px; padding-right: 5px; }
 }
-
-
-
-
-
-
-

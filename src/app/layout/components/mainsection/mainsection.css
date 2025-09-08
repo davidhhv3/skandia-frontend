@@ -1,158 +1,185 @@
-
+/* ===============================
+   Contenedor principal de la sección
+   =============================== */
 .mainsection-container {
   display: flex;
-  flex-direction: column; /* secciones una debajo de otra */
+  flex-direction: column; 
   width: 100%;     
 }
 
+/* ===============================
+   Secciones principales
+   =============================== */
 .section1, .section2 {
   display: flex;   
 }
-.section1{
+
+/* -------------------------------
+   Section1
+   ------------------------------- */
+.section1 {
   position: relative;
 }
-/* section1 */
+
+/* Contenido de section1 */
 .section1-content {
   height: 100%;  
   transition: width 0.3s ease;  
   width: 100%;   
-} 
+}
 
+/* Sidebar */
 .sidebar {
-  position: absolute;   /* flota dentro de section1 */
+  position: absolute;   
   top: 0;
   left: 0;
   height: 805px; 
   background-color: #E2E2E2;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 10;          /* queda por encima del content */  
-  width: 2.5%;         /* ancho relativo */
-  min-width: 30px;   /* nunca será más grande que esto */
+  z-index: 10;          
+  width: 2.5%;         
+  min-width: 30px;      
 }
-  .sidebar-icon-container{
-    width: 100%;
-    aspect-ratio: 1 / 1; 
-    background-color: #00C83C;   
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    cursor: pointer;
-  }
 
-.notificacion-card-container{
+.sidebar-icon-container {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  background-color: #00C83C;   
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  cursor: pointer;
+}
+
+/* Tarjeta de notificación */
+.notificacion-card-container {
   position: absolute;  
   top: 38%;
   left: 50%;
   width: 530px;
   height: 280px;
   background-color: white;
-  transform: translate(-50%, -50%); /* lo centra */
+  transform: translate(-50%, -50%); 
   border-radius: 7px;  
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
   padding-top: 1%;
 }
 
-.section1-content-top{
+/* Section1: Contenido top */
+.section1-content-top {
   height: 285px;
   background-color: #34798a;
   padding: 0 200px; 
 }
 
-  .inicio{  
-    display: flex;
-    gap: 8px;
-    padding-top: 30px;
-    cursor: pointer;
-  }
-  .inicio-texto{
-    text-decoration: underline;  
-    font-weight: bold;  
-    font-family: Verdana, Geneva, Tahoma, sans-serif;     
-    font-size: 12px;        
-  }
+/* Inicio */
+.inicio {  
+  display: flex;
+  gap: 8px;
+  padding-top: 30px;
+  cursor: pointer;
+}
 
-.notificacion{ 
+.inicio-texto {
+  text-decoration: underline;  
+  font-weight: bold;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;     
+  font-size: 12px;        
+}
+
+/* Notificación */
+.notificacion { 
    height: 100%;
    display: flex;
    flex-direction: column; 
    align-items: center;  
    padding-top: 30px;
 }
-.notificacion-texto1{
+
+.notificacion-texto1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 25px;
-   font-weight: bold;  
+  font-weight: bold;  
 }
-.notificacion-texto2{
+
+.notificacion-texto2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;  
 }
-.color-blanco{
+
+.color-blanco {
   color: white;    
 }
 
-.section1-content-bottom{
+/* Section1: Contenido bottom */
+.section1-content-bottom {
   height: 520px;   
   background-image: url('../../../../../public/Group\ 3329.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; /* ocupa todo el div sin deformarse */
+  background-size: cover; 
   display: flex;
   flex-direction: column;
   align-items: center; 
   justify-content: center;    
 }
-  .section1-goal-text {
-    color: #3F3F3F; 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 25px;    
-    padding-bottom: 13px;
-  }
 
-  .highlight-orange {
-    color: #FE9200;
-  }
-  .section1-subgoal-text {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;     
-      font-size: 16px;  
-      color: #3F3F3F;
-      padding-bottom: 7px;
-  }
-  .section1-action-container{
-    display: flex;
-    gap: 10px;
-  }
-    .section1-action-text{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;   
-        font-weight: bold;  
-        font-size: 16px;  
-        color: #3F3F3F;    
-    }
-     
-/* section1 */
+.section1-goal-text {
+  color: #3F3F3F; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;    
+  padding-bottom: 13px;
+}
 
-/* section2 */
-.section2{   
+.highlight-orange {
+  color: #FE9200;
+}
+
+.section1-subgoal-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;     
+  font-size: 16px;  
+  color: #3F3F3F;
+  padding-bottom: 7px;
+}
+
+.section1-action-container {
+  display: flex;
+  gap: 10px;
+}
+
+.section1-action-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;   
+  font-weight: bold;  
+  font-size: 16px;  
+  color: #3F3F3F;    
+}
+
+/* -------------------------------
+   Section2
+   ------------------------------- */
+.section2 {   
    height: 390px;   
    display: flex;
    justify-content: center;
    position: relative;   
 }
 
-.card-container{
+.card-container {
   width: 65%;
   height: 399px;
   position: absolute;
   bottom: 43%;  
 }
-.associate-button-container{
+
+.associate-button-container {
   position: relative;
-  top:70%;
+  top: 70%;
   width: 260px;
   height: 50px;  
 }
-.associate-button{
+
+.associate-button {
   width: 100%;
   height: 100%;
   border-radius: 25px;
@@ -164,24 +191,26 @@
   cursor: pointer;
 }
 
+/* ===============================
+   Responsive
+   =============================== */
 
-/* section2 */
-
-
-@media ((max-width: 1240px)) {
-  .section1-content-top{
+/* Pantallas medianas */
+@media (max-width: 1240px) {
+  .section1-content-top {
     padding: 0 50px; 
   }
 }
+
 @media (max-width: 960px) {
-  .section1-content-top{
+  .section1-content-top {
     padding: 0 30px; 
   }
-  .card-container{  
+  .card-container {  
     height: 90%;
   }
-
 }
+
 @media (max-width: 670px) {
   .section1-goal-text {
     font-size: 20px;    
@@ -191,44 +220,42 @@
     font-size: 13px;    
     padding-bottom: 5px;
   }
-
-  .section1-action-text{
-      font-size: 13px;     
+  .section1-action-text {
+    font-size: 13px;     
   }
-  .section1-action-icon{
+  .section1-action-icon {
     width: 6%;
   }
-  .card-container{  
+  .card-container {  
     height: 80%;
   }
 }
+
 @media (max-width: 600px) {
-  .inicio-texto{  
+  .inicio-texto {  
     font-size: 11px;        
   }
-  .notificacion-texto1{
+  .notificacion-texto1 {
     font-size: 24px;    
   }
-
-  .notificacion-texto2{ 
+  .notificacion-texto2 { 
     font-size: 15px;  
   }
-  .notificacion-card-container{   
+  .notificacion-card-container {   
     top: 34%; 
     width: 400px;
     height: 200px;   
     padding-top: 1%;
   }
 }
+
 @media (max-width: 572px) {
-  .notificacion-texto1{
+  .notificacion-texto1 {
     font-size: 20px;    
   }
-
-  .notificacion-texto2{ 
+  .notificacion-texto2 { 
     font-size: 14px;  
   }
-
   .section1-goal-text {
     font-size: 18px;    
     padding-bottom: 9px;
@@ -237,22 +264,22 @@
     font-size: 13px;    
     padding-bottom: 5px;
   }
-
-  .section1-action-text{
-      font-size: 13px;     
+  .section1-action-text {
+    font-size: 13px;     
   }
 }
+
 @media (max-width: 487px) {
-  .inicio-texto{  
+  .inicio-texto {  
     font-size: 10px;        
   }
-  .notificacion-texto1{
+  .notificacion-texto1 {
     font-size: 15px;    
   }
-  .notificacion-texto2{ 
+  .notificacion-texto2 { 
     font-size: 13px;  
   }
-  .notificacion-card-container{    
+  .notificacion-card-container {    
     left: 50%;
     width: 330px;   
   }
@@ -265,17 +292,16 @@
     display: flex;  
     text-align: center;   
   }
-
-  .section1-action-text{
-      font-size: 12px;     
+  .section1-action-text {
+    font-size: 12px;     
   }
-  
 }
+
 @media (max-width: 385px) {
-  .notificacion-texto1{
+  .notificacion-texto1 {
     font-size: 13px;    
   }
-  .notificacion-texto2{ 
+  .notificacion-texto2 { 
     font-size: 11px;  
   }
 }

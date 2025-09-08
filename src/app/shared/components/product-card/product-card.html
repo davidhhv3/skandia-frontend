@@ -1,35 +1,47 @@
+<!-- Contenedor principal de la tarjeta de producto -->
+<div class="product-card">
 
-                      <div class="product-card">
-                          <!-- Header -->
-                          <div class="card-header">
-                            <div class="product-dates">
-                                  <p class="product-name">{{ product.nameProduct }}</p>
-                                  <p class="product-number">#{{ product.numberProduct }}</p>
-                            </div>
+  <!-- ===========================
+       Header: Nombre y número del producto
+       =========================== -->
+  <div class="card-header">
 
-                            <div class="custom-check"></div>
-                          </div>
+    <!-- Fechas / información básica del producto -->
+    <div class="product-dates">
+      <p class="product-name">{{ product.nameProduct }}</p>
+      <p class="product-number">#{{ product.numberProduct }}</p>
+    </div>
+    
+    <div class="custom-check"></div>
+  </div>
 
-                          <hr />
+  <hr />
 
-                          <!-- Balance -->
-                          <div class="balance">
-                            <p class="balance-title">Ya cuentas con:</p>
-                            <p class="amount">${{product.balanceProduct}}</p>
-                          </div>
+  <!-- ===========================
+       Balance del producto
+       =========================== -->
+  <div class="balance">
+    <p class="balance-title">Ya cuentas con:</p>
+    <p class="amount">${{product.balanceProduct}}</p>
+  </div>
 
-                          <!-- Footer -->
-                          <div class="card-footer">
-                            <img src="Happy.svg" class="footer-icon" />
+  <!-- ===========================
+       Footer: Icono y descripción detallada
+       =========================== -->
+  <div class="card-footer">
+  
+    <img src="Happy.svg" class="footer-icon" alt="Happy Icon"/>
 
-                            <div class="footer-description-container">
+    <!-- Descripción detallada del producto -->
+    <div class="footer-description-container">
+      <p class="footer-description">
+        ¡Cuentas con <span class="highlight">${{product.balanceProduct}}</span>!<br/>
+        <small class="desciption-bottom">{{ product.detaildProduct }}</small>                              
+      </p>
+    </div> 
+  </div>
 
-                              <p class = "footer-description">
-                                ¡Cuentas con <span class="highlight">${{product.balanceProduct}}</span>!<br/>
-                                <small class="desciption-bottom">{{ product.detaildProduct }}</small>                              
-                              </p>
-                            </div> 
-                          </div>
+  <!-- Elemento decorativo o de separación inferior -->
+  <div class="to-floor"></div>
 
-                           <div class="to-floor"></div>
-                      </div>
+</div> <!-- /.product-card -->
