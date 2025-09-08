@@ -24,11 +24,11 @@ describe('ProductCard', () => {
     component = fixture.componentInstance; 
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should accept product input', () => {
+  fit('should accept product input', () => {//**************** */
     component.product = mockProduct;
     expect(component.product).toEqual(mockProduct);
   });

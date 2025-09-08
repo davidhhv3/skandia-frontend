@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { Home } from './home';
 
 describe('Home', () => {
@@ -8,7 +8,7 @@ describe('Home', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Home]
+      imports: [Home,HttpClientModule]
     })
     .compileComponents();
 
@@ -21,6 +21,18 @@ describe('Home', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should toggle sidebarCollapsed when toggleSidebar is called', () => {
+    // valor inicial
+    expect(component.sidebarCollapsed).toBeFalse();
+
+    // primer toggle → debe quedar en true
+    component.toggleSidebar();
+    expect(component.sidebarCollapsed).toBeTrue();
+
+    // segundo toggle → debe volver a false
+    component.toggleSidebar();
+    expect(component.sidebarCollapsed).toBeFalse();
+  });
 
 
 });

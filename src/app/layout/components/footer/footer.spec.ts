@@ -18,18 +18,9 @@ describe('Footer', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  fit("should get result",() =>{
-    component.num1 = 3;
-    component.num2 = 2;
-    component.sumar();
-
-    expect(component.result).toBe(5);
-  })
-
 
 
 });

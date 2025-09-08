@@ -16,11 +16,11 @@ describe('Header', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should emit menuToggle event when onMenuClick is called', () => {
+  it('should emit menuToggle event when onMenuClick is called', () => {
     // Arrange
     spyOn(component.menuToggle, 'emit');
 
@@ -31,7 +31,7 @@ describe('Header', () => {
     expect(component.menuToggle.emit).toHaveBeenCalled();
   });
 
-  fit('should notify subscribers when menuToggle is emitted', (done) => {
+  it('should notify subscribers when menuToggle is emitted', (done) => {
     // Arrange: suscribirse al evento
     component.menuToggle.subscribe(() => {
       // Assert: si llega aquí, el evento fue emitido

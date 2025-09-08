@@ -30,15 +30,15 @@ describe('Mainsection', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should have collapsed default to false', () => {
+  it('should have collapsed default to false', () => {
     expect(component.collapsed).toBeFalse();
   });
 
-  fit('should accept collapsed as true when passed from parent', () => {
+  it('should accept collapsed as true when passed from parent', () => {
     // Act: simular que el padre pasa collapsed=true
     component.collapsed = true;
     fixture.detectChanges();

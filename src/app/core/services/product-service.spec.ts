@@ -36,11 +36,11 @@ describe('ProductService', () => {
     httpMock.verify();
   });
 
-  fit('should be created', () => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('should fetch products from API', () => {
+  it('should fetch products from API', () => {
     service.getProducts().subscribe((response) => {
       expect(response.listCard.length).toBe(2);
       expect(response.listCard).toEqual(mockProducts);
