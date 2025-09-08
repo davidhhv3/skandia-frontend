@@ -68,7 +68,10 @@
 /* Section1: Contenido top */
 .section1-content-top {
   height: 285px;
-  background-color: #34798a;
+  background-image: url('/fondo.png'); /* Usa la imagen desde la carpeta public */
+  background-size: cover;   /* Para que se ajuste al contenedor */
+  background-position: center; /* Centrada */
+  background-repeat: no-repeat; /* Evita repetición */
   padding: 0 200px; 
 }
 
